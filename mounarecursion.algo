@@ -1,0 +1,13 @@
+ FUNCTION  pro( word : STRING) : BOOLEAN
+VAR
+	j,i : INTEGER ;
+BEGIN
+	j := word.length-1;
+	FOR i  FROM 0 TO word.length-1
+		IF (word[i] <> word[j]) THEN
+			RETURN  false ;
+		END_IF
+        j := j-1;
+	END_FOR
+	RETURN true ;
+END
